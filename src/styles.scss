@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #fa2759;
+$secondary: #2dfcd8;
+$grey: #1a1a1a;
+$black: #000000;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $black;
+    color: white !important;
+
+    h1 {
+        font-size: 64px;
+        font-weight: bold !important;
+        line-height: 90px !important;
+        text-shadow: 3px 3px black;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.clr-primary {
+    color: $primary !important;
+}
+
+.bgr-primary {
+    background-color: $primary !important;
+}
+
+.clr-secondary {
+    color: $secondary !important;
+}
+
+.bgr-secondary {
+    background-color: $secondary !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
