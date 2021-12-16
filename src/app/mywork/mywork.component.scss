@@ -1,3 +1,19 @@
+
+h1 {
+    font-size: 64px !important;
+    font-weight: bold !important;
+    line-height: 90px !important;
+    text-shadow: 3px 3px black;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -49,6 +65,10 @@
             object-fit: contain;
             width: 252px;
             height: 252px;
+            
+            &:hover + div {
+                display: flex;
+            }
         }
     }
 
@@ -60,4 +80,23 @@
         text-align: center;
         color: #000000;
     }
+
+    div {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 250px;
+        border-radius: 6px;
+        background-color: #1a1a1a;
+        opacity: 65%;
+        z-index: 333;
+        color: #ffffff;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    
 }

@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 $primary: #fa2759;
 $secondary: #2dfcd8;
 $grey: #1a1a1a;
@@ -10,7 +12,7 @@ body {
     color: white !important;
 
     h1 {
-        font-size: 64px;
+        font-size: 64px !important;
         font-weight: bold !important;
         line-height: 90px !important;
         text-shadow: 3px 3px black;
