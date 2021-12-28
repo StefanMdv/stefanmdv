@@ -1,0 +1,49 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    position: absolute;
+    width: 156px;
+    height: 90px;
+    top: 16px;
+    z-index: 699;
+    padding-bottom: 60px;
+
+    h2 {
+        font-size: 36px !important;
+        font-family: Karla !important;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 90px;
+        color: #ffffff;
+        text-shadow: 3px 3px black;
+    }
+}
+
+.header {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    .foto {
+    
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid #fee383;
+        }
+    }
+
+    .quote {
+        width: 300px;
+    }
+}
+
+

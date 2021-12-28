@@ -39,7 +39,7 @@ $black: #000000;
         font-weight: 500 !important;
         font-size: 16px !important;
         line-height: 19px !important;
-        font-family: Inter !important;
+        font-family: Karla !important;
 
         &:hover {
             animation: rubberBand 0.8s;
@@ -92,18 +92,20 @@ header {
 
 .textarea {
     position: absolute;
-    width: 715px;
+    width: 70%;
     height: 278px;
     left: 119px;
     top: 200px;
     font-family: Inter;
     font-style: normal;
     color: white;
+
     h1 {
         margin: 0 auto;
         overflow: hidden;
         white-space: nowrap;
         animation: typing 5.5s steps(50, end);
+        font-family: Karla !important;
     }
    
 }
@@ -198,8 +200,8 @@ footer {
 }
 .contact-btn {
     position: absolute;
-    width: 300.52px;
-    height: 78px;
+    width: 250px;
+    height: 65px;
     left: 125px;
     top: 500px;
     border: 2px solid $secondary;
@@ -234,7 +236,7 @@ footer {
 
 .foto {
     position: absolute;
-    left: 80%;
+    right: 80px;
     top: 162px;
 
     img {
@@ -245,3 +247,76 @@ footer {
         border: 2px solid $primary;
     }
 }
+
+@media (max-width: 1250px) { 
+
+    h1 {
+        font-size: 50px !important;
+    }
+ }
+
+ @media (max-width: 950px) {
+    h1 {
+        font-size: 40px !important;
+    }
+
+    .foto {
+        position: absolute;
+        right: 80px;
+        top: 162px;
+    
+        img {
+            width: 160px;
+            height: 160px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid $primary;
+        }
+    }
+ }
+
+ @media (max-width: 750px) {
+    
+    .contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .foto {
+
+        
+            img {
+                
+                width: 160px;
+                height: 160px;
+                border-radius: 100%;
+                object-fit: cover;
+                border: 2px solid $primary;
+                
+            }
+        }
+     
+    }
+    .contact-btn {
+        position: absolute;
+        width: 250px;
+        height: 65px;
+        left: 20%;
+        top: 550px
+    }
+
+    .textarea {
+        position: absolute;
+        top: 220px;
+        width: 70%;
+        height: 278px;
+        left: 24px;
+       min-width: 305px;
+       
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+ }

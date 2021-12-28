@@ -10,6 +10,8 @@ body {
     padding: 0;
     background-color: $black;
     color: white !important;
+    overflow-x: hidden;
+    font-family: Karla !important;
 
     h1 {
         font-size: 64px !important;
@@ -47,11 +49,3 @@ body {
     background-color: $secondary !important;
 }
 
-html,
-body {
-    height: 100%;
-}
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}

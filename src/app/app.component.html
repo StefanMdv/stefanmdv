@@ -13,11 +13,20 @@
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+          <li class="nav-item" *ngIf="langEnglish">
+            <a class="nav-link" href="#">About me</a>
+          </li>
+          <li class="nav-item" *ngIf="langDeutsch">
+            <a class="nav-link" href="#">Über mich</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="english()">English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="deutsch()">Deutsch</a>
           </li>
         </ul>
       </div>
@@ -27,15 +36,26 @@
 <header>
   <img src="assets/img/sky-background.jpg" id="bg">
 </header>
-<span class="textarea">
-  <h1>
-    Hi, <br>
-    I'm <span style="color: #fee383">Stefan</span> Moldoveanu <br>
-    Front End Developer
-     </h1>
-</span>
-<span class="foto"><img src="assets/img/foto.png" alt=""></span>
-<a href="#contact"><button mat-stroked-button color="primary" class="contact-btn">Contact me</button></a>
+<div class="contents">
+  <div class="foto"><img src="assets/img/foto.png" alt=""></div>
+  <div class="textarea" *ngIf="langEnglish">
+    <h1>
+      Hi, <br>
+      I'm <span style="color: #fee383">Stefan</span> Moldoveanu <br>
+      Front End Developer
+    </h1>
+  </div>
+  <div class="textarea" *ngIf="langDeutsch">
+    <h1>
+      Servus, <br>
+      Ich bin <span style="color: #fee383">Stefan</span> Moldoveanu <br>
+      Front End Developer
+    </h1>
+  </div>
+
+  <a href="#contact"><button mat-stroked-button color="primary" class="contact-btn" *ngIf="langEnglish">Contact me</button><button mat-stroked-button color="primary" class="contact-btn" *ngIf="langDeutsch">Kontaktiere mich</button></a>
+</div>
+
 
 <div class="skills">
   <router-outlet></router-outlet>
