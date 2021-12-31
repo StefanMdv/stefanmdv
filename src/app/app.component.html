@@ -13,66 +13,52 @@
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item" *ngIf="langEnglish">
-            <a class="nav-link" href="#">About me</a>
-          </li>
-          <li class="nav-item" *ngIf="langDeutsch">
-            <a class="nav-link" href="#">Über mich</a>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToElement('about')">{{ 'nav.about' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" (click)="scrollToElement('work')">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="english()">English</a>
+            <a class="nav-link" (click)="useLanguage('en')">{{ 'nav.lang1' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="deutsch()">Deutsch</a>
+            <a class="nav-link" (click)="useLanguage('de')">{{ 'nav.lang2' | translate }}</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </nav>
-<header>
+<header *ngIf="router.url =='/'">
   <img src="assets/img/sky-background.jpg" id="bg">
+  <div class="header" id="header">
+    <app-header></app-header>
+  </div>
 </header>
-<div class="contents">
-  <div class="foto"><img src="assets/img/foto.png" alt=""></div>
-  <div class="textarea" *ngIf="langEnglish">
-    <h1>
-      Hi, <br>
-      I'm <span style="color: #fee383">Stefan</span> Moldoveanu <br>
-      Front End Developer
-    </h1>
-  </div>
-  <div class="textarea" *ngIf="langDeutsch">
-    <h1>
-      Servus, <br>
-      Ich bin <span style="color: #fee383">Stefan</span> Moldoveanu <br>
-      Front End Developer
-    </h1>
+<div>
+  <div class="imprint">
+    <router-outlet></router-outlet>
   </div>
 
-  <a href="#contact"><button mat-stroked-button color="primary" class="contact-btn" *ngIf="langEnglish">Contact me</button><button mat-stroked-button color="primary" class="contact-btn" *ngIf="langDeutsch">Kontaktiere mich</button></a>
-</div>
+  <div class="skills" *ngIf="router.url =='/'" id="skills">
+    <app-skills></app-skills>
+  </div>
 
+  <div class="work" *ngIf="router.url =='/'" id="work">
+    <app-mywork></app-mywork>
+  </div>
 
-<div class="skills">
-  <router-outlet></router-outlet>
-</div>
+  <div class="aboutme" *ngIf="router.url =='/'" id="about">
+    <app-aboutme></app-aboutme>
+  </div>
 
-<div class="work">
-  <router-outlet name="work"></router-outlet>
-</div>
+  <div class="contact" id="contact" *ngIf="router.url =='/'" id="contact">
+    <app-contact></app-contact>
+  </div>
 
-<div class="aboutme">
-  <router-outlet name="aboutme"></router-outlet>
-</div>
-
-<div class="contact" id="contact">
-  <router-outlet name="contact"></router-outlet>
 </div>
 
 <footer>
-  <router-outlet name="footer"></router-outlet>
+  <app-footer></app-footer>
 </footer>

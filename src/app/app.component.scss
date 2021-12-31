@@ -43,6 +43,7 @@ $black: #000000;
 
         &:hover {
             animation: rubberBand 0.8s;
+            cursor: pointer;
         }
 
         &:hover,
@@ -69,7 +70,7 @@ header {
     justify-content: center;
     align-items: center;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 78%, transparent 100%);
-    mix-blend-mode: luminosity;
+    //mix-blend-mode: luminosity;
 }
 
 #text {
@@ -107,7 +108,6 @@ header {
         animation: typing 5.5s steps(50, end);
         font-family: Karla !important;
     }
-   
 }
 
 @keyframes typing {
@@ -118,8 +118,6 @@ header {
         width: 100%;
     }
 }
-
-
 
 @keyframes rubberBand {
     0% {
@@ -142,7 +140,15 @@ header {
     }
 }
 
-
+.imprint { 
+    width: 100%;
+    min-height: 800px;
+    max-height: 4600px;
+    height: auto;
+    overflow: scroll;
+    display: flex;
+    justify-content: flex-start;   
+}
 .skills {
     position: absolute;
     display: flex;
@@ -182,12 +188,17 @@ header {
 }
 
 footer {
-    position: absolute;
+   position: absolute;
+   top: 5000px;
     width: 100%;
     height: 200px;
-    left: 0px;
-    top: 4629px;
     background: linear-gradient(0deg, $black 0%, #494949 35%, $black 100%);
+
+    a {
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 @keyframes button-animation {
@@ -199,11 +210,8 @@ footer {
     }
 }
 .contact-btn {
-    position: absolute;
     width: 250px;
     height: 65px;
-    left: 125px;
-    top: 500px;
     border: 2px solid $secondary;
     box-sizing: border-box;
     font-family: Gilroy-Bold;
@@ -218,27 +226,20 @@ footer {
         color: white;
         text-shadow: 1px 1px black;
         animation: button-animation 1s ease-in-out;
+
+        a {
+            color: white;
+            text-shadow: 1px 1px black;
+        }
     }
 
     a {
         text-decoration: none;
         color: $secondary;
     }
-
-    &:hover {
-        background-color: $secondary;
-        a {
-            color: white;
-            text-shadow: 1px 1px black;
-        }
-    }
 }
 
 .foto {
-    position: absolute;
-    right: 80px;
-    top: 162px;
-
     img {
         width: 220px;
         height: 220px;
@@ -247,25 +248,59 @@ footer {
         border: 2px solid $primary;
     }
 }
-
-@media (max-width: 1250px) { 
-
-    h1 {
-        font-size: 50px !important;
-    }
- }
-
- @media (max-width: 950px) {
+@media (min-width: 950px) {
     h1 {
         font-size: 40px !important;
     }
-
     .foto {
         position: absolute;
         right: 80px;
         top: 162px;
     
         img {
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid $primary;
+        }
+    }
+    .contact-btn {
+        position: absolute;
+        width: 250px;
+        height: 65px;
+        left: 125px;
+        top: 500px;
+    }
+}
+
+@media (max-width: 1250px) {
+    h1 {
+        font-size: 50px !important;
+    }
+}
+
+@media (max-width: 950px) {
+    h1 {
+        font-size: 40px !important;
+    }
+    .contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .foto {
+        position: unset;
+        right: unset;
+        top: unset;
+
+        img {
+            position: unset;
+            top: unset;
+            left: unset;
+            right: unset;
             width: 160px;
             height: 160px;
             border-radius: 100%;
@@ -273,10 +308,16 @@ footer {
             border: 2px solid $primary;
         }
     }
- }
+    .contact-btn {
+        position: unset;
+        width: 250px;
+        height: 65px;
+        left: unset;
+        top: unset;
+    }
+}
 
- @media (max-width: 750px) {
-    
+@media (max-width: 750px) {
     .contents {
         display: flex;
         justify-content: center;
@@ -284,39 +325,33 @@ footer {
         flex-direction: column;
 
         .foto {
-
-        
             img {
-                
                 width: 160px;
                 height: 160px;
                 border-radius: 100%;
                 object-fit: cover;
                 border: 2px solid $primary;
-                
             }
         }
-     
     }
     .contact-btn {
-        position: absolute;
+        position: unset;
         width: 250px;
         height: 65px;
-        left: 20%;
-        top: 550px
+        left: unset;
+        top: unset;
     }
 
     .textarea {
-        position: absolute;
-        top: 220px;
+        position: unset;
+        top: unset;
         width: 70%;
         height: 278px;
-        left: 24px;
-       min-width: 305px;
-       
+        left: unset;
+        min-width: 305px;
     }
 
     h1 {
         font-size: 30px !important;
     }
- }
+}

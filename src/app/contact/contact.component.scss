@@ -1,0 +1,84 @@
+p {
+    font-size: 18px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    height: 90px;
+    padding-top: 16px;
+    z-index: 699;
+    padding-bottom: 60px;
+
+    h2 {
+        font-size: 36px !important;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 90px;
+        color: #fee383;
+        text-shadow: 3px 3px black;
+    }
+}
+.subtitle {
+    padding-top: 32px;
+    text-align: center;
+}
+
+form {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+
+    @keyframes button-animation {
+        from {
+            font-size: 18px;
+        }
+        to {
+            font-size: 28px;
+        }
+    }
+
+    button {
+        margin-top: 24px;
+        width: 160px;
+        height: 60px;
+        background-color: #fee383 !important;
+        text-shadow: 0.9px 0.9px black;
+
+        &:hover {
+            animation: button-animation 1s ease-in-out;
+        }
+    }
+}
+
+
+textarea {
+    height: 200px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #ffa31a !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #ffa31a !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: #ffa31a !important;
+  }

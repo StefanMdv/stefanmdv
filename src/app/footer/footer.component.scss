@@ -1,0 +1,16 @@
+.content {
+padding-top: 80px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        color: #ffa31a;
+    }
+    
+}
+}

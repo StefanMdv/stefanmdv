@@ -1,0 +1,62 @@
+{
+    "header": {
+        "text": "Hallo,",
+        "text2": " Ich bin ",
+        "button": "Kontaktiere mich"
+    },
+
+    "nav": {
+        "about": "Über mich",
+        "lang1":"Englisch",
+        "lang2": "Deutsch"
+    },
+
+    "skills": {
+        "title": "Meine Fähigkeiten"
+    },
+
+    "work": {
+        "title": "Meine Arbeit", 
+        "app1": "Quizz Spiel",
+        "app2": "Das 'Drei gewinnt' Spiel",
+        "app3": "Kanban Board",
+        "app4": "JS basiertes jump & run Spiel",
+        "app5": "Trinkspiel",
+        "app6": "Einfaches CRM"
+    }, 
+
+    "about": {
+        "title": "Über mich"
+    },
+
+    "contact": {
+        "title": "Kontaktiere mich"
+    },
+
+    "contactform": {
+        "title": "Kontaktieren Sie mich über das untenstehende Formular oder per E-Mail unter "
+    },
+
+    "form": {
+        "name": "Gib deinen Namen ein",
+        "email": "Gib deine Email-Adresse ein",
+        "text": "Gib deine Nachricht ein",
+        "button": "Senden"
+    },
+
+    "errors": {
+        "mail1": "You must enter a value",
+        "mail2": "Not a valid email"   
+    },
+
+    "footer": {
+        "link1": "Impressum",
+        "link2": "Datenschutzerklärung"   
+    },
+
+    "imprint": {
+        "title": "Impressum",
+        "p": " Angaben gemäß § 5 TMG :", 
+        "p2": "Kontakt"      
+    }
+}

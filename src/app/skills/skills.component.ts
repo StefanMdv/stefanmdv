@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -7,13 +7,16 @@ import { AppComponent } from '../app.component';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent  implements OnInit {
+export class SkillsComponent   implements OnInit {
 
-  constructor() {
-    
+  constructor(public translate: TranslateService) {
+    translate.setDefaultLang('en');
   }
 
   ngOnInit(): void {
   }
-  
+ 
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
 }

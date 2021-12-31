@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<div class="content">
+    <span class="title">
+        <h2>{{ 'contact.title' | translate }}</h2>
+    </span>
+    <span class="subtitle">
+        <p>{{ 'contactform.title' | translate }}<span style="color: #fee383"> contact@stefan-moldoveanu.com</span></p>
+    </span>
+
+    <form action="https://stefan-moldoveanu.com/send_mail.php" method="POST">
+        <mat-form-field appearance="fill">
+            <mat-label>{{'form.name' | translate}}</mat-label>
+            <input [(ngModel)]="name"  type="name" name="name" matInput required autocomplete="off">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>{{'form.email' | translate}}</mat-label>
+            <input [(ngModel)]="mail" type="email" name="email" matInput placeholder="{{'form.email' | translate}}" [formControl]="email" required autocomplete="off">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>{{'form.text' | translate}}</mat-label>
+            <textarea [(ngModel)]="msg" name="message" matInput autocomplete="off"></textarea>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit" (click)='sendMail()'>{{'form.button' | translate}}</button>
+
+    </form>
+</div>

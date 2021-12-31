@@ -1,7 +1,12 @@
 @import "~bootstrap/scss/bootstrap";
-
-$primary: #fa2759;
-$secondary: #2dfcd8;
+:root {
+    $primary: #ffa31a;
+    $secondary: #fee383;
+    $grey: #1a1a1a;
+    $black: #000000;
+}
+$primary: #ffa31a;
+$secondary: #fee383;
 $grey: #1a1a1a;
 $black: #000000;
 
@@ -48,4 +53,3 @@ body {
 .bgr-secondary {
     background-color: $secondary !important;
 }
-

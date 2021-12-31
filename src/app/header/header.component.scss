@@ -1,0 +1,210 @@
+$primary: #ffa31a;
+$secondary: #fee383;
+$grey: #1a1a1a;
+$black: #000000;
+
+.textarea {
+    z-index: 99;
+    height: 278px;
+    font-family: Inter;
+    font-style: normal;
+    color: white;
+    min-width: 305px;
+
+    h1 {
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 5.5s steps(50, end);
+        font-family: Karla !important;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    35% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    45% {
+        transform: scale3d(0.75, 1, 1);
+    }
+    60% {
+        transform: scale3d(1.2, 0.8, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes button-animation {
+    from {
+        font-size: 18px;
+    }
+    to {
+        font-size: 28px;
+    }
+}
+.contact-btn {
+    width: 250px;
+    height: 65px;
+    border: 2px solid $secondary;
+    box-sizing: border-box;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+    line-height: 14px;
+    text-align: center;
+    color: $secondary;
+    background-color: transparent;
+    z-index: 99;
+
+    &:hover {
+        background-color: $secondary;
+        color: white;
+        text-shadow: 1px 1px black;
+        animation: button-animation 1s ease-in-out;
+    }
+}
+
+.foto {
+    z-index: 99;
+    img {
+        width: 220px;
+        height: 220px;
+        border-radius: 100%;
+        object-fit: cover;
+        border: 2px solid $primary;
+        z-index: 99;
+    }
+}
+@media (min-width: 950px) {
+    h1 {
+        font-size: 40px !important;
+    }
+    .foto {
+        position: absolute;
+        right: 80px;
+        top: 162px;
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid $primary;
+        }
+    }
+    .contact-btn {
+        position: absolute;
+        width: 250px;
+        height: 65px;
+        left: 125px;
+        top: 500px;
+    }
+    .textarea {
+        position: absolute;
+        height: 278px;
+        left: 119px;
+        top: 200px;
+        min-width: 305px;
+    }
+}
+
+@media (max-width: 1250px) {
+    h1 {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 950px) {
+    h1 {
+        font-size: 40px !important;
+    }
+    .contents {
+        z-index: 99;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .foto {
+        position: unset;
+        right: unset;
+        top: unset;
+
+        img {
+            position: unset;
+            top: unset;
+            left: unset;
+            right: unset;
+            width: 160px;
+            height: 160px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid $primary;
+        }
+    }
+    .contact-btn {
+        position: unset;
+        width: 250px;
+        height: 65px;
+        left: unset;
+        top: unset;
+    }
+}
+
+@media (max-width: 750px) {
+    .contents {
+        z-index: 99;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 600px;
+
+        .foto {
+            img {
+                width: 160px;
+                height: 160px;
+                border-radius: 100%;
+                object-fit: cover;
+                border: 2px solid $primary;
+            }
+        }
+    }
+    .contact-btn {
+        position: unset;
+        width: 250px;
+        height: 65px;
+        left: unset;
+        top: unset;
+    }
+
+    .textarea {
+        position: unset;
+        top: unset;
+        width: 70%;
+        height: 278px;
+        left: unset;
+        min-width: 305px;
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+}

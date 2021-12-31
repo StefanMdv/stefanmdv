@@ -1,0 +1,63 @@
+{
+    "header": {
+        "text": "Hi,",
+        "text2": " I'm",
+        "button": "Contact me"
+    },
+
+    "nav": {
+        "about": "About me",
+        "lang1":"English",
+        "lang2": "German"
+    },
+
+    "skills": {
+        "title": "My Skills"
+    },
+
+    "work": {
+        "title": "My Work", 
+        "app1": "Quizz Game",
+        "app2": "The Tic Tac Toe Game",
+        "app3": "Kanban Board",
+        "app4": "JS based jump & run game",
+        "app5": "Drinking Game",
+        "app6": "Simple CRM"
+    }, 
+
+    "about": {
+        "title": "About me"
+    },
+
+    "contact": {
+        "title": "Contact me"
+    },
+
+    "contactform": {
+        "title": "Get in touch via the form below, or by emailing "
+    },
+
+    "form": {
+        "name": "Enter your name",
+        "email": "Enter your Email address",
+        "text": "Enter your message",
+        "button": "Send"
+    },
+
+    "errors": {
+        "mail1": "You must enter a value",
+        "mail2": "Not a valid email"   
+    },
+
+    "footer": {
+        "link1": "Imprint",
+        "link2": "Data-protection"   
+    },
+
+    "imprint": {
+        "title": "Imprint",
+        "p": "Information according to § 5 TMG :", 
+        "p2": "Contact"   
+    }
+}
+
