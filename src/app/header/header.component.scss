@@ -72,7 +72,7 @@ $black: #000000;
     z-index: 99;
 
     &:hover {
-        background-color: $secondary;
+        background-color: #fee383;
         color: white;
         text-shadow: 1px 1px black;
         animation: button-animation 1s ease-in-out;
@@ -82,7 +82,7 @@ $black: #000000;
 .foto {
     z-index: 99;
     img {
-        width: 220px;
+        width: 200px;
         height: 220px;
         border-radius: 100%;
         object-fit: cover;
@@ -100,7 +100,7 @@ $black: #000000;
         top: 162px;
 
         img {
-            width: 220px;
+            width: 200px;
             height: 220px;
             border-radius: 100%;
             object-fit: cover;
@@ -113,6 +113,7 @@ $black: #000000;
         height: 65px;
         left: 125px;
         top: 500px;
+        z-index: 99999;
     }
     .textarea {
         position: absolute;
@@ -152,7 +153,7 @@ $black: #000000;
             top: unset;
             left: unset;
             right: unset;
-            width: 160px;
+            width: 150px;
             height: 160px;
             border-radius: 100%;
             object-fit: cover;
@@ -179,7 +180,7 @@ $black: #000000;
 
         .foto {
             img {
-                width: 160px;
+                width: 150px;
                 height: 160px;
                 border-radius: 100%;
                 object-fit: cover;
@@ -206,5 +207,15 @@ $black: #000000;
 
     h1 {
         font-size: 30px !important;
+    }
+}
+
+@media (max-width:450px) {
+    .textarea {
+        min-width: 260px;
+
+        h1 {
+            font-size: 25px !important;
+        }
     }
 }

@@ -23,12 +23,12 @@
 }
 
 .header {
-    margin-top: 200px;
+    margin-top: 110px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 800px;
-
+    width: 80vw;
 
     .foto {
         img {
@@ -41,25 +41,38 @@
     }
 
     .quote {
-        width: 300px;
+        max-width: 300px;
     }
 }
 
 @media (max-width: 750px) {
-    .foto {
-        img {
-            width: 120px;
-            height: 120px;
-            border-radius: 100%;
-            object-fit: cover;
-            border: 2px solid #fee383;
-        }
-    }
-
-    .header{
+    .header {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
+        margin-top: 0;
+
+        .foto {
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                object-fit: cover;
+                border: 2px solid #fee383;
+            }
+        }
+
+        .quote {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
     }
 }

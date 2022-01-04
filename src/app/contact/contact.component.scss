@@ -1,3 +1,5 @@
+$primary :#ffa31a;
+
 p {
     font-size: 18px;
 }
@@ -59,7 +61,6 @@ form {
     }
 }
 
-
 textarea {
     height: 200px;
 }
@@ -71,14 +72,42 @@ textarea {
 ::ng-deep .mat-focused .mat-form-field-label {
     /*change color of label*/
     color: #ffa31a !important;
-   }
-  
-   ::ng-deep.mat-form-field-underline {
+}
+
+::ng-deep.mat-form-field-underline {
     /*change color of underline*/
-    background-color: #ffa31a !important;
-  } 
-  
-  ::ng-deep.mat-form-field-ripple {
-   /*change color of underline when focused*/
-   background-color: #ffa31a !important;
-  }
+    background-color: $primary !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: $primary !important;
+}
+
+.foto {
+    img {
+        width: 200px;
+        height: 220px;
+        border-radius: 100%;
+        object-fit: cover;
+        border: 2px solid $primary;
+    }
+}
+
+@media (max-width: 750px) {
+    .subtitle {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .foto {
+        img {
+            width: 150px;
+            height: 160px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid $primary;
+        }
+    }
+}
+
+

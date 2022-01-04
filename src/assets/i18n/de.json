@@ -58,5 +58,12 @@
         "title": "Impressum",
         "p": " Angaben gemäß § 5 TMG :", 
         "p2": "Kontakt"      
+    },
+
+    "quote": {
+        "p1": "Ich bin ein analytischer und lösungsorientierter Mensch, der in unerwarteten Situationen schnelle Entscheidungen treffen kann.",
+        "p2": "Herausforderungen motivieren mich und ich verfolge die Ziele gewissenhaft, sowohl in Einzelaufgaben als auch in Teamprojekten.",
+        "p3": "Ich mag Struktur, Information und Out-of-the-Box-Denken. ",
+        "p4": "Neben dem Programmieren liebe ich es Motorrad zu fahren und kleine Projekte rund ums Haus zu bauen."
     }
 }

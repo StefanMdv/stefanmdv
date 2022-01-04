@@ -58,6 +58,13 @@
         "title": "Imprint",
         "p": "Information according to § 5 TMG :", 
         "p2": "Contact"   
+    },
+
+    "quote": {
+        "p1": "I’m an analytical and solution-oriented person, capable of taking quick decisions in unexpected situations.",
+        "p2": "Challenges motivate me and I diligently pursue the goals, both in individual assignments and team projects.",
+        "p3": "I enjoy structure, information and out-of-the-box thinking.",
+        "p4": "Besides Programming I love riding my motorbike and doing small projects around the house."
     }
 }
 
