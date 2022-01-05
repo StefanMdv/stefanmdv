@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
-import {FormControl, Validators} from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,13 +8,16 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  contact = {
+    name :'',
+  mail : '',
+  msg : '',
+  };
+  
+  
 
-  name='';
-  mail='';
-  msg = '';
 
-
-  constructor(public translate: TranslateService) { 
+  constructor(public translate: TranslateService) {
     translate.setDefaultLang('en');
   }
 
@@ -30,23 +33,29 @@ export class ContactComponent implements OnInit {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  
+
   useLanguage(language: string): void {
     this.translate.use(language);
   }
 
-  async sendMail(){
-    let formData = new FormData();
-    formData.append('name', this.name);
-    formData.append('email', this.mail);
-    formData.append('message', this.msg);
-    
-     await fetch('https://stefan-moldoveanu.com/send_mail.php', {
-         method: "POST",
-         body: formData
-      });
-      alert('E-Mail send!');
-    }
+  async sendMail(ngForm) {
+    let myForm = ngForm;
+    let alertme = this.translate.instant('contactForm.alert')
+    if (ngForm.form.valid) {
+      let formData = new FormData();
+      formData.append('name', this.contact.name);
+      formData.append('email', this.contact.mail);
+      formData.append('message', this.contact.msg);
 
-    
+      await fetch('https://stefan-moldoveanu.com/send_mail.php', {
+        method: "POST",
+        body: formData
+      });
+      myForm.reset();
+      alert(alertme);
+      document.getElementById('formName').innerHTML = '';
+      document.getElementById('formEmail').innerHTML = '';
+      document.getElementById('formMsg').innerHTML = '';
+    } 
+  }
 }

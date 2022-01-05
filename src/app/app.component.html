@@ -1,20 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark" >
   <div class="container-fluid">
     <div>
-      <a class="navbar-brand" href="#"><img src="../assets/img/mylogo2.png" alt="mylogo" class="logo"></a>
+      <a class="navbar-brand" href="#"><img src="assets/img/mylogo2.png" alt="mylogo" class="logo"></a>
     </div>
     <div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Home</a>
+            <a class="nav-link " aria-current="page" href="#" >Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToElement('about')">{{ 'nav.about' | translate }}</a>
+            <a  class="nav-link" (click)="scrollToElement('about')">{{ 'nav.about' | translate }}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="scrollToElement('work')">Portfolio</a>
@@ -59,6 +59,6 @@
 
 </div>
 
-<footer>
+<footer id="footer">
   <app-footer></app-footer>
 </footer>

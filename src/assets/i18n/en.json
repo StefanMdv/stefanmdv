@@ -65,6 +65,10 @@
         "p2": "Challenges motivate me and I diligently pursue the goals, both in individual assignments and team projects.",
         "p3": "I enjoy structure, information and out-of-the-box thinking.",
         "p4": "Besides Programming I love riding my motorbike and doing small projects around the house."
+    },
+
+    "contactForm": {
+        "alert": "Your email has been successfuly sent !"
     }
 }
 

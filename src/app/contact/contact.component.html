@@ -6,24 +6,24 @@
         <p>{{ 'contactform.title' | translate }}<span style="color: #fee383"> contact@stefan-moldoveanu.com</span></p>
     </span>
 
-    <form action="https://stefan-moldoveanu.com/send_mail.php" method="POST">
+    <form  (ngSubmit)='sendMail(contactForm)' #contactForm="ngForm" >
         <mat-form-field appearance="fill">
             <mat-label>{{'form.name' | translate}}</mat-label>
-            <input [(ngModel)]="name"  type="name" name="name" matInput required autocomplete="off">
+            <input [(ngModel)]="contact.name"  type="name" name="name" matInput required autocomplete="off" #name="ngModel" id="formName">
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>{{'form.email' | translate}}</mat-label>
-            <input [(ngModel)]="mail" type="email" name="email" matInput placeholder="{{'form.email' | translate}}" [formControl]="email" required autocomplete="off">
+            <input [(ngModel)]="contact.mail" type="email" name="email" matInput placeholder="{{'form.email' | translate}}" [email]="true" required autocomplete="off" #mail="ngModel" id="formEmail">
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>{{'form.text' | translate}}</mat-label>
-            <textarea [(ngModel)]="msg" name="message" matInput autocomplete="off"></textarea>
+            <textarea [(ngModel)]="contact.msg" name="message" matInput autocomplete="off" #message="ngModel" id="formMsg"></textarea>
           </mat-form-field>
 
-          <button mat-raised-button color="primary" type="submit" (click)='sendMail()'>{{'form.button' | translate}}</button>
+          <button [disabled]="contactForm.invalid" mat-raised-button color="primary" type="submit" >{{'form.button' | translate}}</button>
 
     </form>
 </div>

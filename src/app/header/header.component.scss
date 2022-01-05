@@ -58,6 +58,7 @@ $black: #000000;
         font-size: 28px;
     }
 }
+
 .contact-btn {
     width: 250px;
     height: 65px;
@@ -113,8 +114,8 @@ $black: #000000;
         height: 65px;
         left: 125px;
         top: 500px;
-        z-index: 99999;
     }
+
     .textarea {
         position: absolute;
         height: 278px;
@@ -134,13 +135,18 @@ $black: #000000;
     h1 {
         font-size: 40px !important;
     }
+
+    .textarea {
+        text-align: center;
+    }
+
     .contents {
-        z-index: 99;
+        margin-top: 80px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        height: 600px;
+        height: 800px;
     }
 
     .foto {
@@ -158,6 +164,7 @@ $black: #000000;
             border-radius: 100%;
             object-fit: cover;
             border: 2px solid $primary;
+            z-index: 99999;
         }
     }
     .contact-btn {
@@ -187,35 +194,63 @@ $black: #000000;
                 border: 2px solid $primary;
             }
         }
-    }
-    .contact-btn {
-        position: unset;
-        width: 250px;
-        height: 65px;
-        left: unset;
-        top: unset;
-    }
+        .contact-btn {
+            position: unset;
+            width: 220px;
+            height: 65px;
+            left: unset;
+            top: unset;
+        }
 
-    .textarea {
-        position: unset;
-        top: unset;
-        width: 70%;
-        height: 278px;
-        left: unset;
-        min-width: 305px;
-    }
+        .textarea {
+            position: unset;
+            top: unset;
+            width: 70%;
+            height: 278px;
+            left: unset;
+            min-width: 305px;
+        }
 
-    h1 {
-        font-size: 30px !important;
+        h1 {
+            font-size: 30px !important;
+        }
     }
 }
 
-@media (max-width:450px) {
-    .textarea {
-        min-width: 260px;
+@media (max-width: 450px) {
+    .contents {
+        .textarea {
+            min-width: 260px;
 
-        h1 {
-            font-size: 25px !important;
+            h1 {
+                font-size: 25px !important;
+            }
+        }
+
+        .contact-btn {
+            position: unset;
+            width: 200px;
+            height: 65px;
+            left: unset;
+            top: unset;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .contents {
+        .textarea {
+            h1 {
+                font-size: 20px !important;
+            }
+        }
+        
+        .contact-button {
+            position: unset;
+            width: 180px;
+            height: 65px;
+            left: unset;
+            top: unset;
         }
     }
 }
