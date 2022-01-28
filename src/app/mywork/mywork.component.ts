@@ -13,7 +13,7 @@ export class MyworkComponent implements OnInit {
   projects = [
     {
       name: "Quizz",
-      description: "work.app1' | translate }}",
+      description: "{{work.app1' | translate }}",
       img: "assets/img/quiz.png",
       categorie: "javascript",
       url: "https://stefan-moldoveanu.com/Quizapp/index.html",
