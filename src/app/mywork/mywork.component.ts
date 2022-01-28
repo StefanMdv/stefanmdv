@@ -13,14 +13,14 @@ export class MyworkComponent implements OnInit {
   projects = [
     {
       name: "Quizz",
-      description: "{{work.app1' | translate }}",
+      description: "{{'work.app1' | translate }}",
       img: "assets/img/quiz.png",
       categorie: "javascript",
       url: "https://stefan-moldoveanu.com/Quizapp/index.html",
     },
     {
       name: "Join",
-      description: "{{ 'work.app3' | translate }}",
+      description: "",
       img: "assets/img/Backlog.PNG",
       categorie: "javascript",
       url: "https://stefan-moldoveanu.com/Kanban/Kanban-Board/board.html",
@@ -59,6 +59,7 @@ export class MyworkComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   // this.projects.push({"description": "this.workApp1"})
     this.proj = this.projects;
   }
 
@@ -91,4 +92,5 @@ selectCategory(type) {
     this.categorie = type;
     this.getFilteredProjects();
 }
+
 }

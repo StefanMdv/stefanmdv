@@ -10,12 +10,12 @@
     </div>
 
     <div class="work" id="mywork" >
-        <a *ngFor="let p of proj" href="{{p.url}}" class="animate__animated"  [class.animate__backInLeft]="showPortfolioRow">
-            <div class="card">
-                <div id="work1">{{p.description}}</div>
-                <mat-card>
-                    <img src="{{p.img}}">                    
-                </mat-card>
+        <mat-card *ngFor="let p of proj"  class="animate__animated"  [class.animate__backInLeft]="showPortfolioRow">
+            <img src="{{p.img}}">            
+            <div id="work1">{{p.description}}
+                <a href="{{p.url}}" target="_blank"><button mat-stroked-button class="work-btn" >Try out</button></a>
             </div>
-        </a>             
+                
+        
+        </mat-card>             
     </div>

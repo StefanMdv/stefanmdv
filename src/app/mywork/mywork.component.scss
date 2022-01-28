@@ -33,23 +33,9 @@ p {
 }
 .work {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-
-  
-
-    a {
-        &:hover {
-            div {
-                display: flex;
-                font-size: 16px ;
-                width: 100%;
-                height: 100%;
-                opacity: 85%;
-            }
-        }
-    }
 }
 
 .selection {
@@ -62,12 +48,15 @@ p {
         width: 128px;
         height: 70px;
         border: 2px solid $secondary;
+        border-radius: 3px;
         color: $secondary;
         background-color: $black;
         margin-left: 8px;
         cursor: pointer;
 
-        & :active, & :focus, &:hover {
+        & :active,
+        & :focus,
+        &:hover {
             background-color: $secondary;
             color: white;
             text-shadow: 1px 1px black;
@@ -75,17 +64,30 @@ p {
     }
 }
 
-.card {
-    position: relative;
-    margin-bottom: 24px;
+mat-card {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 6px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background: #1a1a1a;
+
+    &:hover {
+        div {
+            display: flex;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            opacity: 85%;
+        }
+    }
 
     div {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        flex-direction: column;
         width: 0%;
         height: 0%;
         border-radius: 6px;
@@ -100,31 +102,39 @@ p {
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         transition: all 450ms ease-in-out;
+
+       button {
+           //background-color: $secondary;
+           border: 2px solid $primary;
+           border-radius: 3px;
+           color: $primary;
+           text-shadow: 1px 1px black;
+       }
     }
 
-    mat-card {
-        width: 300px;
-        height: 300px;
+    img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
         border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            object-fit: contain;
-            width: 300px;
-            height: 300px;
-            border-radius: 6px;
-        }
     }
+}
 
-    p {
-        font-style: normal;
-        font-weight: normal;
-        line-height: 28px;
-        text-align: center;
-        color: #000000;
+p {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+}
+
+@media (min-width: 1440px) {
+    mat-card {
+        width: 400px;
+        height: 400px;
     }
 }
 
@@ -136,35 +146,26 @@ p {
         justify-content: center;
     }
 
-    .card {
-        position: relative;
-        display: flex;
-        align-items: center;
-        background: #1a1a1a;
+    mat-card {
+        width: 180px;
+        height: 180px;
 
         div {
             width: 180px;
             height: 180px;
         }
 
-        mat-card {
+        img {
+            object-fit: contain;
             width: 180px;
             height: 180px;
-
-            img {
-                object-fit: contain;
-                width: 180px;
-                height: 180px;
-                border-radius: 6px;
-            }
+            border-radius: 6px;
         }
     }
 }
 
 @media (max-width: 300px) {
-    h2{
+    h2 {
         font-size: 28px !important;
     }
 }
-
-
