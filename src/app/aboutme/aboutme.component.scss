@@ -7,7 +7,7 @@
 .title {
     height: 90px;   
     z-index: 699;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
     margin-top: 32px;
 
     h2 {
@@ -72,8 +72,12 @@
     }
 }
 
-@media (max-width: 300px) {
-    h2{
+@media (max-width: 400px) {
+    h2 {
         font-size: 28px !important;
+    }
+
+    p {
+        font-size: 14px;
     }
 }

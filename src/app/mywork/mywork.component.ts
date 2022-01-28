@@ -13,44 +13,43 @@ export class MyworkComponent implements OnInit {
   projects = [
     {
       name: "Quizz",
-      description: "{{'work.app1' | translate }}",
+      description: "work.app1",
       img: "assets/img/quiz.png",
       categorie: "javascript",
       url: "https://stefan-moldoveanu.com/Quizapp/index.html",
     },
     {
       name: "Join",
-      description: "",
+      description: "work.app4",
       img: "assets/img/Backlog.PNG",
       categorie: "javascript",
       url: "https://stefan-moldoveanu.com/Kanban/Kanban-Board/board.html",
     },
     {
       name: "El-Pollo-Loco",
-      description: "{{ 'work.app4' | translate }}",
+      description: "work.app4",
       img: "assets/img/El_Pollo_Loco.png",
       categorie: "javascript",
       url: "https://stefan-moldoveanu.com/El-Pollo-Loco/index.html",
     },
     {
       name: "Ring Of Fire",
-      description: "{{ 'work.app5' | translate }}",
+      description: "work.app5",
       img: "assets/img/ring-of-fire.png",
       categorie: "angular",
       url: "https://stefan-moldoveanu.com/RingOfFire/",
     },
     {
       name: "Business - App",
-      description: "{{ 'work.app6' | translate }}",
+      description: "work.app6",
       img: "assets/img/simple-crm.png",
       categorie: "angular",
       url: "https://stefan-moldoveanu.com/Business-App/index.html",
     },
   ];
-
   categorie = 'all';
   proj= [];
-  workApp1 = this.translate.instant('work.app1');
+  
   
  
 
@@ -59,7 +58,6 @@ export class MyworkComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   // this.projects.push({"description": "this.workApp1"})
     this.proj = this.projects;
   }
 

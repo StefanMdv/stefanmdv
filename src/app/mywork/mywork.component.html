@@ -4,7 +4,7 @@
     </span>
 
     <div class="selection">
-        <button class="selection-btn" (click)="selectCategory('all')">All</button>
+        <button class="selection-btn" (click)="selectCategory('all')">{{'mywork.selection' | translate}}</button>
         <button class="selection-btn" (click)="selectCategory('angular')">Angular</button>
         <button class="selection-btn" (click)="selectCategory('javascript')">JavaScript</button>
     </div>
@@ -12,8 +12,8 @@
     <div class="work" id="mywork" >
         <mat-card *ngFor="let p of proj"  class="animate__animated"  [class.animate__backInLeft]="showPortfolioRow">
             <img src="{{p.img}}">            
-            <div id="work1">{{p.description}}
-                <a href="{{p.url}}" target="_blank"><button mat-stroked-button class="work-btn" >Try out</button></a>
+            <div id="work1">{{p.description | translate}}
+                <a href="{{p.url}}" target="_blank"><button mat-stroked-button class="work-btn" >{{'mywork.btn' | translate}}</button></a>
             </div>
                 
         

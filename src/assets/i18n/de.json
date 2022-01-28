@@ -25,6 +25,11 @@
         "app6": "Einfaches CRM"
     }, 
 
+    "mywork": {
+        "selection": "Alle",
+        "btn": "Ausprobieren"
+    },
+
     "about": {
         "title": "ÜBER MICH"
     },

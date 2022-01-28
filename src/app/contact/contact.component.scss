@@ -56,8 +56,10 @@ form {
         text-shadow: 0.9px 0.9px black;
         font-family:Lora !important;
 
-        &:hover {
-            animation: button-animation 1s ease-in-out;
+        &:disabled {
+           background-color: grey !important;
+           color: lightgray;
+           cursor: no-drop;
         }
     }
 }
@@ -111,9 +113,13 @@ textarea {
     }
 }
 
-@media (max-width: 300px) {
-    h2{
+@media (max-width: 400px) {
+    h2 {
         font-size: 28px !important;
+    }
+
+    p {
+        font-size: 14px;
     }
 }
 

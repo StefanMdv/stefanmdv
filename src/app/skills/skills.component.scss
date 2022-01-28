@@ -82,6 +82,7 @@ p {
         }
     }
     p {
+        font-size: 18px;
         font-style: normal;
         font-weight: normal;
         line-height: 28px;
@@ -203,10 +204,13 @@ p {
     }
 }
 
-@media (max-width: 300px) {
-    h2{
-        font-size: 28px;
+@media (max-width: 400px) {
+    h2 {
+        font-size: 28px !important;
     }
+}
+
+@media (max-width: 300px) {
     .skills {
         justify-content: center;
 

@@ -25,6 +25,11 @@
         "app6": "Simple CRM"
     }, 
 
+    "mywork": {
+        "selection": "All",
+        "btn": "Try out"
+    },
+
     "about": {
         "title": "ABOUT ME"
     },

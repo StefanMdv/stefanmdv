@@ -46,7 +46,7 @@ p {
 
     .selection-btn {
         width: 128px;
-        height: 70px;
+        height: 50px;
         border: 2px solid $secondary;
         border-radius: 3px;
         color: $secondary;
@@ -79,7 +79,7 @@ mat-card {
             font-size: 16px;
             width: 100%;
             height: 100%;
-            opacity: 85%;
+            opacity: 95%;
         }
     }
 
@@ -106,13 +106,12 @@ mat-card {
         bottom: 0;
         transition: all 450ms ease-in-out;
 
-       button {
-           //background-color: $secondary;
-           border: 2px solid $primary;
-           border-radius: 3px;
-           color: $primary;
-           text-shadow: 1px 1px black;
-       }
+        button {
+            border: 2px solid $primary;
+            border-radius: 3px;
+            color: $primary;
+            text-shadow: 1px 1px black;
+        }
     }
 
     img {
@@ -138,34 +137,47 @@ p {
     }
 }
 
-@media (max-width: 650px) {
-    .work {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media (max-width: 550px) {
+    mat-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .selection {
+        .selection-btn {
+            width: 98px;
+            height: 40px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 28px !important;
     }
 
     mat-card {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
+    }
 
-        div {
-            width: 180px;
-            height: 180px;
-        }
-
-        img {
-            object-fit: contain;
-            width: 180px;
-            height: 180px;
-            border-radius: 6px;
+    .selection {
+        .selection-btn {
+            width: 75px;
+            height: 30px;
+            font-size: smaller;
         }
     }
 }
 
 @media (max-width: 300px) {
-    h2 {
-        font-size: 28px !important;
+   
+
+    .selection {
+        .selection-btn {
+            width: 55px;
+            height: 30px;
+            font-size: 8px;
+        }
     }
 }
