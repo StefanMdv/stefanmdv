@@ -3,20 +3,41 @@ $secondary: #fee383;
 $grey: #1a1a1a;
 $black: #000000;
 
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.down {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    color: $grey;
+    background-color: $secondary;
+    align-self: center;
+}
+
 .textarea {
     z-index: 99;
-    height: 278px;
-    font-family: Inter;
     font-style: normal;
     color: white;
-    min-width: 305px;
+    padding-bottom: 48px;
 
     h1 {
         margin: 0 auto;
         overflow: hidden;
         white-space: nowrap;
-        animation: typing 5.5s steps(50, end);
-        font-family: Karla !important;
+        animation: typing 4s steps(60, end);
+        line-height: 56px;
     }
 }
 
@@ -64,13 +85,13 @@ $black: #000000;
     height: 65px;
     border: 2px solid $secondary;
     box-sizing: border-box;
-    font-family: Gilroy-Bold;
     font-size: 18px;
     line-height: 14px;
     text-align: center;
     color: $secondary;
     background-color: transparent;
     z-index: 99;
+    font-family:Lora !important;
 
     &:hover {
         background-color: #fee383;
@@ -83,8 +104,8 @@ $black: #000000;
 .foto {
     z-index: 99;
     img {
-        width: 200px;
-        height: 220px;
+        width: 290px;
+        height: 310px;
         border-radius: 100%;
         object-fit: cover;
         border: 2px solid $primary;
@@ -96,44 +117,48 @@ $black: #000000;
         font-size: 40px !important;
     }
     .foto {
-        position: absolute;
-        right: 80px;
-        top: 162px;
-
         img {
-            width: 200px;
-            height: 220px;
+            width: 250px;
+            height: 270px;
             border-radius: 100%;
             object-fit: cover;
             border: 2px solid $primary;
         }
     }
     .contact-btn {
-        position: absolute;
         width: 250px;
         height: 65px;
-        left: 125px;
-        top: 500px;
-    }
-
-    .textarea {
-        position: absolute;
-        height: 278px;
-        left: 119px;
-        top: 200px;
-        min-width: 305px;
     }
 }
 
+
+
 @media (max-width: 1250px) {
     h1 {
-        font-size: 40px !important;
+        font-size: 36px !important;
+    }
+
+    .foto {
+        img {
+            width: 180px;
+            height: 200px;
+            border-radius: 100%;
+            object-fit: cover;
+            border: 2px solid $primary;
+            z-index: 99999;
+        }
     }
 }
 
 @media (max-width: 950px) {
     h1 {
-        font-size: 40px !important;
+        font-size: 30px !important;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .textarea {
@@ -141,26 +166,18 @@ $black: #000000;
     }
 
     .contents {
-        margin-top: 80px;
+        margin-top: 0;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;
-        height: 800px;
+        flex-direction: column-reverse;
+        height: 80%;
     }
 
     .foto {
-        position: unset;
-        right: unset;
-        top: unset;
-
         img {
-            position: unset;
-            top: unset;
-            left: unset;
-            right: unset;
-            width: 150px;
-            height: 160px;
+            width: 130px;
+            height: 140px;
             border-radius: 100%;
             object-fit: cover;
             border: 2px solid $primary;
@@ -168,71 +185,70 @@ $black: #000000;
         }
     }
     .contact-btn {
-        position: unset;
-        width: 250px;
-        height: 65px;
-        left: unset;
-        top: unset;
+        width: 200px;
+        height: 55px;
     }
 }
 
 @media (max-width: 750px) {
     .contents {
+        margin-top: 0;
+        padding-top: 16px;
+        padding-bottom: 60px;
         z-index: 99;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;
-        height: 600px;
+        flex-direction: column-reverse;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .foto {
             img {
-                width: 150px;
-                height: 160px;
+                width: 130px;
+                height: 140px;
                 border-radius: 100%;
                 object-fit: cover;
                 border: 2px solid $primary;
             }
         }
         .contact-btn {
-            position: unset;
-            width: 220px;
-            height: 65px;
-            left: unset;
-            top: unset;
+            width: 200px;
+            height: 55px;
         }
 
         .textarea {
-            position: unset;
-            top: unset;
-            width: 70%;
             height: 278px;
             left: unset;
-            min-width: 305px;
         }
 
         h1 {
-            font-size: 30px !important;
+            font-size: 27px !important;
         }
     }
 }
 
 @media (max-width: 450px) {
     .contents {
-        .textarea {
-            min-width: 260px;
-
-            h1 {
-                font-size: 25px !important;
+        .foto {
+            img {
+                width: 100px;
+                height: 110px;
+                border-radius: 100%;
+                object-fit: cover;
+                border: 2px solid $primary;
             }
         }
 
-        .contact-btn {
-            position: unset;
-            width: 200px;
-            height: 65px;
-            left: unset;
-            top: unset;
+        .textarea {
+
+            h1 {
+                font-size: 22px !important;
+            }
         }
     }
 }
@@ -241,16 +257,13 @@ $black: #000000;
     .contents {
         .textarea {
             h1 {
-                font-size: 20px !important;
+                font-size: 18px !important;
             }
         }
-        
-        .contact-button {
-            position: unset;
-            width: 180px;
-            height: 65px;
-            left: unset;
-            top: unset;
+
+        .contact-btn {
+            width: 160px;
+            height: 45px;
         }
     }
 }

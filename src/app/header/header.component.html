@@ -1,18 +1,22 @@
-<div class="contents">
-    <div class="foto"><img src="assets/img/img1.png" alt=""></div>
-    <div class="textarea">
-      <h1>
-        {{ 'header.text' | translate }}<br>
-        {{ 'header.text2' | translate }} <span style="color: #fee383">Stefan</span> Moldoveanu <br>
-        Front End Developer
-      </h1>
+<div class="header">
+  
+  <div class="contents">
+    <div class="left">
+      <div class="textarea">
+        <h1>
+          {{ 'header.text' | translate }}<br>
+          {{ 'header.text2' | translate }} <span style="color: #fee383">Stefan</span> Moldoveanu <br>
+          Front End Developer
+        </h1>
+      </div>
+
+      <button mat-stroked-button class="contact-btn" (click)="scrollToElement('contact')">{{ 'header.button' | translate}}</button>
+
     </div>
-  
-  
-  
-    <button mat-stroked-button class="contact-btn" (click)="scrollToElement('contact')">{{ 'header.button' | translate
-        }}</button>
-  
+
+    <div class="foto"><img src="assets/img/img1.png" alt=""></div>
+
   </div>
-  
-  
+
+  <button class="down" (click)="scrollToElement('skills')"><mat-icon>swipe_down_alt</mat-icon></button>
+</div>

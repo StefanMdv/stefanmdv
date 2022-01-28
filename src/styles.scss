@@ -1,5 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'animate.css';
+
+* {
     $primary: #ffa31a;
     $secondary: #fee383;
     $grey: #1a1a1a;
@@ -16,25 +19,28 @@ body {
     background-color: $black;
     color: white !important;
     overflow-x: hidden;
-    font-family: Karla !important;
+    font-family:Lora !important;
 
     h1 {
         font-size: 64px !important;
         font-weight: bold !important;
-        line-height: 90px !important;
         text-shadow: 3px 3px black;
+        font-family:Cinzel !important;
     }
 
     h2 {
         font-size: 36px;
+        font-family:Quattrocento !important;
     }
 
     p {
         font-size: 18px;
+        font-family:Lora !important;
     }
 
     a {
         color: white;
+        font-family:Lora !important;
     }
 }
 

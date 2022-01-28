@@ -2,18 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .title {
-    position: absolute;
     width: 156px;
-    height: 90px;
-    top: 16px;
+    height: 90px;   
     z-index: 699;
-    padding-bottom: 60px;
+    margin-bottom: 64px;
+    margin-top: 32px;
 
     h2 {
-        font-size: 36px !important;
-        font-family: Karla !important;
+        font-size: 36px;
         font-style: normal;
         font-weight: 500;
         line-height: 90px;
@@ -23,14 +22,14 @@
 }
 
 .header {
-    margin-top: 110px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 800px;
-    width: 80vw;
+    justify-content: space-between;
+    width: 100%;
 
     .foto {
+        margin-right: 32px;
+
         img {
             width: 220px;
             height: 220px;
@@ -38,10 +37,6 @@
             object-fit: cover;
             border: 2px solid #fee383;
         }
-    }
-
-    .quote {
-        max-width: 300px;
     }
 }
 
@@ -53,8 +48,11 @@
         flex-direction: column;
         margin-top: 0;
 
+       
+
         .foto {
-            margin-top: 100px;
+            margin-top: 48px;
+            margin-bottom: 48px;
             
             img {
                 width: 120px;
@@ -69,12 +67,14 @@
             padding-left: 8px;
             padding-right: 8px;
         }
+    }
+    .title {
+        margin-bottom: 0;
+    }
+}
 
-        .header {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-direction: column;
-        }
+@media (max-width: 300px) {
+    h2{
+        font-size: 28px !important;
     }
 }

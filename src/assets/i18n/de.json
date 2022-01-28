@@ -12,11 +12,11 @@
     },
 
     "skills": {
-        "title": "Meine Fähigkeiten"
+        "title": "MEINE FÄHIGKEITEN"
     },
 
     "work": {
-        "title": "Meine Arbeit", 
+        "title": "MEINE ARBEIT", 
         "app1": "Quizz Spiel",
         "app2": "Das 'Drei gewinnt' Spiel",
         "app3": "Kanban Board",
@@ -26,11 +26,11 @@
     }, 
 
     "about": {
-        "title": "Über mich"
+        "title": "ÜBER MICH"
     },
 
     "contact": {
-        "title": "Kontaktiere mich"
+        "title": "KONTAKTIERE MICH"
     },
 
     "contactform": {

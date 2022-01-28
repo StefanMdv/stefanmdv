@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImprintComponent } from './imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -40,6 +41,7 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
   ],
   imports: [
     BrowserModule,
+    MatGridListModule,
     HttpClientModule,
     AppRoutingModule, 
     MatIconModule,

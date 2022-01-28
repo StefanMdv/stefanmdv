@@ -17,8 +17,7 @@ p {
     padding-bottom: 60px;
 
     h2 {
-        font-size: 36px !important;
-        font-family: Inter;
+        font-size: 36px;
         font-style: normal;
         font-weight: 500;
         line-height: 90px;
@@ -32,12 +31,13 @@ p {
 }
 
 form {
-    margin-top: 90px;
+    margin-top: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    margin-bottom: 48px;
 
     @keyframes button-animation {
         from {
@@ -54,6 +54,7 @@ form {
         height: 60px;
         background-color: #fee383 !important;
         text-shadow: 0.9px 0.9px black;
+        font-family:Lora !important;
 
         &:hover {
             animation: button-animation 1s ease-in-out;
@@ -110,4 +111,9 @@ textarea {
     }
 }
 
+@media (max-width: 300px) {
+    h2{
+        font-size: 28px !important;
+    }
+}
 

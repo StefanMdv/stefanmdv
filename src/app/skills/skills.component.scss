@@ -3,33 +3,28 @@ h1 {
     font-weight: bold !important;
     line-height: 90px !important;
     text-shadow: 3px 3px black;
-    font-family: Karla !important;
 }
 
 h2 {
     font-size: 36px;
-    font-family: Karla !important;
 }
 
 p {
     font-size: 18px;
-    font-family: Karla !important;
 }
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .title {
-    position: absolute;
     height: 90px;
-    top: 16px;
     z-index: 699;
-    padding-bottom: 60px;
+    padding-bottom: 180px;
 
     h2 {
-        font-family: Karla !important;
         font-style: normal;
         font-weight: 500;
         line-height: 90px;
@@ -39,25 +34,26 @@ p {
 }
 
 .skills {
-    padding-top: 170px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 70px 35px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom: 64px;
+    width: 100%;   
 }
 
 .card {
     position: relative;
     display: flex;
     align-items: center;
+    margin: 16px 16px 32px 16px;
 
     &:hover {
         animation: rubberBand 0.8s;
     }
 
     mat-card {
-        width: 182.97px;
-        height: 119.92px;
+        width: 170px;
+        height: 110px;
         background: #ffffff;
         border-radius: 6px;
         display: flex;
@@ -86,7 +82,6 @@ p {
         }
     }
     p {
-        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         line-height: 28px;
@@ -99,8 +94,6 @@ p {
     position: absolute;
     width: 60.31px;
     height: 60.31px;
-    //left: calc(50% - 60.31px);
-    // right: calc(50% - 60.31px);
     top: -25px;
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25);
@@ -117,19 +110,10 @@ p {
 }
 
 @media (max-width: 950px) {
+    
     .skills {
-        padding-top: 170px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 70px 35px;
-    }
-
-    .card {
-        mat-card {
-            width: 150px;
-            height: 90px;
-        }
+        padding-bottom: 80px;
+       
     }
 
     .skill-logo {
@@ -152,13 +136,16 @@ p {
     }
 }
 
-@media (max-width: 450px) {
+
+
+@media (max-width: 700px) {
     .skills {
-        padding-top: 170px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 60px 30px;
+        padding-bottom: 48px;
+       
+    }
+
+    .title{
+        padding-bottom: 120px;
     }
 
     .card {
@@ -181,6 +168,58 @@ p {
         img {
             width: 17px;
             height: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        padding-bottom: 40px;
+       
+    }
+
+    .card {
+        margin: 4px 4px 24px;
+        mat-card {
+            width: 80px;
+            height: 50px;
+
+            p{
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+
+    .skill-logo {
+        width: 25px;
+        height: 25px;
+        top: -15px;
+
+        img {
+            width: 15px;
+            height: 18px;
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    h2{
+        font-size: 28px;
+    }
+    .skills {
+        justify-content: center;
+
+        .card{
+            mat-card {
+                width: 60px;
+                height: 40px;
+    
+                p{
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
         }
     }
 }

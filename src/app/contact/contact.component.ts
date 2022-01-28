@@ -40,7 +40,7 @@ export class ContactComponent implements OnInit {
 
   async sendMail(ngForm) {
     let myForm = ngForm;
-    let alertme = this.translate.instant('contactForm.alert')
+    let alertme = this.translate.instant('contactForm.alert');
     if (ngForm.form.valid) {
       let formData = new FormData();
       formData.append('name', this.contact.name);
@@ -49,7 +49,8 @@ export class ContactComponent implements OnInit {
 
       await fetch('https://stefan-moldoveanu.com/send_mail.php', {
         method: "POST",
-        body: formData
+        body: formData, 
+        mode: 'no-cors'
       });
       myForm.reset();
       alert(alertme);

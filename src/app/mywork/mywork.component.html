@@ -3,59 +3,19 @@
         <h2>{{ 'work.title' | translate }}</h2>
     </span>
 
-    <div class="work">
-        <a href="https://stefan-moldoveanu.com/Quizapp/index.html">
-            <div class="card">
-                <div id="work1">{{ 'work.app1' | translate }}<br>HTML & JS</div>
-                <mat-card>
-                    <img src="assets/img/quiz.png">
-                    
-                </mat-card>
-            </div>
-        </a>
+    <div class="selection">
+        <button class="selection-btn" (click)="selectCategory('all')">All</button>
+        <button class="selection-btn" (click)="selectCategory('angular')">Angular</button>
+        <button class="selection-btn" (click)="selectCategory('javascript')">JavaScript</button>
+    </div>
 
-        <a href="https://stefan-moldoveanu.com/tic-tac-toe/index.html">
+    <div class="work" id="mywork" >
+        <a *ngFor="let p of proj" href="{{p.url}}" class="animate__animated"  [class.animate__backInLeft]="showPortfolioRow">
             <div class="card">
-                <div id="work2">{{ 'work.app2' | translate }}<br>HTML & JS</div>
+                <div id="work1">{{p.description}}</div>
                 <mat-card>
-                    <img src="assets/img/tic-tac-toe.png">
+                    <img src="{{p.img}}">                    
                 </mat-card>
             </div>
-        </a>
-
-        <a href="https://stefan-moldoveanu.com/Kanban/Kanban-Board/board.html">
-            <div class="card">
-                <div id="work3">{{ 'work.app3' | translate }}<br>HTML & JS</div>
-                <mat-card>
-                    <img src="assets/img/Backlog.PNG">
-                </mat-card>
-            </div>
-        </a>
-
-        <a href="https://stefan-moldoveanu.com/El-Pollo-Loco/index.html">
-            <div class="card">
-                <div id="work4">{{ 'work.app4' | translate }}</div>
-                <mat-card>
-                    <img src="assets/img/El_Pollo_Loco.png">
-                </mat-card>
-            </div>
-        </a>
-
-        <a href="https://stefan-moldoveanu.com/RingOfFire/">
-            <div class="card">
-                <div id="work5">{{ 'work.app5' | translate }}<br>Angular</div>
-                <mat-card>
-                    <img src="assets/img/ring-of-fire.png">
-                </mat-card>
-            </div>
-        </a>
-
-        <a href="https://stefan-moldoveanu.com/Business-App/index.html">
-            <div class="card">
-                <div id="work6">{{ 'work.app6' | translate }}<br>Angular</div>
-                <mat-card>
-                    <img src="assets/img/simple-crm.png">
-                </mat-card>
-            </div>
-        </a>
+        </a>             
     </div>

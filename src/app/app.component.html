@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" >
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
     <div>
       <a class="navbar-brand" href="#"><img src="assets/img/mylogo2.png" alt="mylogo" class="logo"></a>
@@ -8,13 +8,13 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#" >Home</a>
+            <a class="nav-link " aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a  class="nav-link" (click)="scrollToElement('about')">{{ 'nav.about' | translate }}</a>
+            <a class="nav-link" (click)="scrollToElement('about')">{{ 'nav.about' | translate }}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="scrollToElement('work')">Portfolio</a>
@@ -31,34 +31,33 @@
   </div>
 </nav>
 <header *ngIf="router.url =='/'">
-  <img src="assets/img/sky-background.jpg" id="bg">
-  <div class="header" id="header">
+  <div class="header section" id="header">
     <app-header></app-header>
   </div>
 </header>
 <div>
-  <div class="imprint">
+  <div class="imprint" *ngIf="router.url !='/'">
     <router-outlet></router-outlet>
   </div>
 
-  <div class="skills" *ngIf="router.url =='/'" id="skills">
+  <div class="skills section" *ngIf="router.url =='/'" id="skills">
     <app-skills></app-skills>
   </div>
 
-  <div class="work" *ngIf="router.url =='/'" id="work">
+  <div class="work section" *ngIf="router.url =='/'" id="work">
     <app-mywork></app-mywork>
   </div>
 
-  <div class="aboutme" *ngIf="router.url =='/'" id="about">
+  <div class="aboutme section" *ngIf="router.url =='/'" id="about">
     <app-aboutme></app-aboutme>
   </div>
 
-  <div class="contact" id="contact" *ngIf="router.url =='/'" id="contact">
+  <div class="contact section" id="contact" *ngIf="router.url =='/'" id="contact">
     <app-contact></app-contact>
   </div>
 
 </div>
 
-<footer id="footer">
+<footer id="footer section">
   <app-footer></app-footer>
 </footer>

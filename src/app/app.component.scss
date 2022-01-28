@@ -3,9 +3,10 @@ $secondary: #fee383;
 $grey: #1a1a1a;
 $black: #000000;
 
+
+
 .navbar-dark .navbar-nav .nav-link .navbar-toggler-icon {
     color: white !important;
-    font-family: Inter;
     background-color: $black !important;
     &:hover,
     &:active,
@@ -34,8 +35,7 @@ $black: #000000;
 .navbar > .container-xl,
 .navbar > .container-xxl {
     align-items: flex-start;
-    padding-left: 60px;
-    padding-right: 60px;
+   margin: 16px 16rem ;
 
     a {
         color: white !important;
@@ -43,8 +43,7 @@ $black: #000000;
         font-weight: 500 !important;
         font-size: 16px !important;
         line-height: 19px !important;
-        font-family: Karla !important;
-
+        
         &:hover {
             animation: rubberBand 0.8s;
             color: $primary !important;
@@ -72,102 +71,47 @@ $black: #000000;
     height: 55px;
 }
 
+
 header {
     z-index: 1;
     position: relative;
     width: 100%;
-    height: 1000px;
     overflow: hidden;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 78%, transparent 100%);
-    //mix-blend-mode: luminosity;
 }
 
-#text {
-    position: relative;
-    color: white;
-    z-index: 1;
-}
-
-#bg {
-    z-index: -99;
-    position: absolute;
-    top: 0;
-    left: 0;
+.section{
+    padding-left: 16rem;
+    padding-right: 16rem;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    opacity: 60%;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 54%, transparent 100%);
 }
-
-.textarea {
-    position: absolute;
-    width: 70%;
-    height: 278px;
-    left: 119px;
-    top: 200px;
-    font-family: Inter;
-    font-style: normal;
-    color: white;
-
-    h1 {
-        margin: 0 auto;
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 5.5s steps(50, end);
-        font-family: Karla !important;
-    }
-}
-
 
 .imprint { 
     width: 100%;
-    min-height: 800px;
-    max-height: 5500px;
-    height: auto;
     display: flex;
     justify-content: flex-start;   
-    overflow: scroll;
 }
 .skills {
-    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 777px;
-    left: 0px;
-    top: 1056px;
     background: linear-gradient(0deg, $black 0%, $grey 35%, $black 100%);
 }
 
 .work {
-    position: absolute;
     width: 100%;
-    height: 1153px;
-    left: 0px;
-    top: 1833px;
     background: $black;
 }
 
 .aboutme {
-    position: absolute;
     width: 100%;
-    height: 949px;
-    left: 0px;
-    top: 2986px;
     background: linear-gradient(0deg, $black 0%, $grey 35%, $black 100%);
 }
 
 .contact {
-    position: absolute;
     width: 100%;
-    height: 894px;
-    left: 0px;
-    top: 3935px;
     background: $black;
 }
 
@@ -176,8 +120,6 @@ header {
 }
 
 footer {
-   position: absolute;
-   top: 5200px;
     width: 100%;
     height: 200px;
     background: linear-gradient(0deg, $black 0%, #494949 35%, $black 100%);
@@ -189,6 +131,40 @@ footer {
     }
 }
 
+@media(max-width: 1250px){
+    
+    .container-fluid{
+        align-items: flex-start;
+        margin: 16px 10rem !important;
+    }
+
+    .section{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    
+}
+
+@media(max-width: 950px){
+    header {
+        align-items: center;
+    }
+    .logo {
+        height: 40px;
+    }
+
+    .container-fluid{
+        align-items: flex-start;
+        margin: 16px 8rem !important;
+    }
+
+    .section{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    
+}
+
 @media(max-width: 750px){
     .logo {
         height: 40px;
@@ -196,67 +172,46 @@ footer {
 
     .container-fluid{
         align-items: flex-start;
-        padding-left: 32px !important;
-        padding-right: 32px !important;
+        margin: 16px 6rem !important;
     }
+
+    .section{
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+    
 }
 
-@media(max-width: 950px){
-    header {
-        align-items: flex-start;
-    }
-}
 
-@media(max-width: 650px){
-    .work {
-        position: absolute;
-        width: 100%;
-        height: 1553px;
-        left: 0px;
-        top: 1833px;
-        background: $black;
-    }
-    
-    .aboutme {
-        position: absolute;
-        width: 100%;
-        height: 949px;
-        left: 0px;
-        top: 3486px;
-        background: linear-gradient(0deg, $black 0%, $grey 35%, $black 100%);
-    }
-    
-    .contact {
-        position: absolute;
-        width: 100%;
-        height: 894px;
-        left: 0px;
-        top: 4435px;
-        background: $black;
-    }
-    
-    footer {
-       position: absolute;
-       top: 5600px;
-        width: 100%;
-        height: 200px;
-        background: linear-gradient(0deg, $black 0%, #494949 35%, $black 100%);
-    
-        a {
-            &:hover {
-                cursor: pointer !important;
-            }
-        }
-    }
-}
 
 @media(max-width: 450px){
    
      .container-fluid{
         align-items: flex-start;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+        margin: 16px 3rem !important;
+    }
+
+    .textarea {
+        padding-bottom: 0;
+    }
+
+    .section{
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
 }
 
+@media(max-width: 300px){
+   
+    .container-fluid{
+       align-items: flex-start;
+       margin: 16px 1.5rem !important;
+   }
+
+   .section{
+       padding-left: 1.5rem;
+       padding-right: 1.5rem;
+   }
+
+}
