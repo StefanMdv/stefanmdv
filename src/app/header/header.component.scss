@@ -44,7 +44,7 @@ $black: #000000;
         margin: 0 auto;
         overflow: hidden;
         white-space: nowrap;
-        animation: typing 4s steps(60, end);
+        animation: typing 2s steps(60, end);
         line-height: 56px;
     }
 }
@@ -99,7 +99,7 @@ $black: #000000;
     color: $secondary;
     background-color: transparent;
     z-index: 99;
-    font-family: Lora !important;
+    font-family: 'Open Sans', sans-serif !important;
 
     &:hover {
         background-color: #fee383;
@@ -224,6 +224,7 @@ $black: #000000;
         .contact-btn {
             width: 200px;
             height: 55px;
+            font-size: 16px;
         }
 
         .textarea {
@@ -250,7 +251,7 @@ $black: #000000;
 
         .textarea {
             h1 {
-                font-size: 22px !important;
+                font-size: 20px !important;
             }
         }
     }
@@ -260,7 +261,7 @@ $black: #000000;
     .contents {
         .textarea {
             h1 {
-                font-size: 18px !important;
+                font-size: 16px !important;
             }
         }
 

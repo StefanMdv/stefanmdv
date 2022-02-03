@@ -4,18 +4,31 @@
     </span>
 
     <div class="selection">
-        <button class="selection-btn" (click)="selectCategory('all')">{{'mywork.selection' | translate}}</button>
-        <button class="selection-btn" (click)="selectCategory('angular')">Angular</button>
-        <button class="selection-btn" (click)="selectCategory('javascript')">JavaScript</button>
+        <button id="all" class="selection-btn isSelected" (click)="selectCategory('all')">{{'mywork.selection' |
+            translate}}</button>
+        <button id="angular" class="selection-btn" (click)="selectCategory('angular')">Angular</button>
+        <button id="javascript" class="selection-btn" (click)="selectCategory('javascript')">JavaScript</button>
     </div>
 
-    <div class="work" id="mywork" >
-        <mat-card *ngFor="let p of proj"  class="animate__animated"  [class.animate__backInLeft]="showPortfolioRow">
-            <img src="{{p.img}}">            
-            <div id="work1">{{p.description | translate}}
-                <a href="{{p.url}}" target="_blank"><button mat-stroked-button class="work-btn" >{{'mywork.btn' | translate}}</button></a>
+    <div class="work" id="mywork">
+        <mat-card *ngFor="let p of proj" class="animate__animated" [class.animate__backInLeft]="showPortfolioRow">
+            <img src="{{p.img}}">
+            <div id="work">
+                <div class="top">
+                    <span class="project-name">
+                        {{p.name | translate}}
+                    </span>
+                    <span class="project-description">
+                        {{p.description | translate}}
+                    </span>
+                    <div class="separator"></div>
+                </div>
+
+
+                <a href="{{p.url}}" target="_blank"><button mat-stroked-button class="work-btn">{{'mywork.btn' |
+                        translate}}</button></a>
             </div>
-                
-        
-        </mat-card>             
+
+
+        </mat-card>
     </div>

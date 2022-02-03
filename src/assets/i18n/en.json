@@ -19,15 +19,16 @@
         "title": "MY WORK", 
         "app1": "Quizz Game",
         "app2": "The Tic Tac Toe Game",
-        "app3": "Kanban Board",
+        "app3": "Tasks management system based on Eisenhower's urgent-important-principle.",
         "app4": "JS based jump & run game",
-        "app5": "Drinking Game",
-        "app6": "Simple CRM"
+        "app5": "Angular-based web-app of the popular drinking game.",
+        "app6": "Smart & simple webbased CRM system.",
+        "app7": "Angular-based web-app with the RESTful Pokémon API."
     }, 
 
     "mywork": {
         "selection": "All",
-        "btn": "Try out"
+        "btn": "Try it out"
     },
 
     "about": {

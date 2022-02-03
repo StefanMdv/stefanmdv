@@ -19,10 +19,11 @@
         "title": "MEINE ARBEIT", 
         "app1": "Quizz Spiel",
         "app2": "Das 'Drei gewinnt' Spiel",
-        "app3": "Kanban Board",
+        "app3": "Aufgabenmanagementsystem basierend auf dem Dringend-Wichtig-Prinzip von Eisenhower",
         "app4": "JS basiertes jump & run Spiel",
-        "app5": "Trinkspiel",
-        "app6": "Einfaches CRM"
+        "app5": "Angular basierte Web-App des beliebten Trinkspiels",
+        "app6": "Intelligentes und einfaches webbasiertes CRM-System",
+        "app7": "Angular basierte Web-App mit der RESTful Pokémon API."
     }, 
 
     "mywork": {

@@ -10,6 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class SkillsComponent   implements OnInit {
 
   showPortfolioRow = false;
+  whindowWidth :number;
   
   constructor(public translate: TranslateService) {
     translate.setDefaultLang('en');
@@ -18,14 +19,30 @@ export class SkillsComponent   implements OnInit {
   ngOnInit(): void {
   }
 
+  @HostListener('window:resize', ['$event'])
+    onResize(event){
+      this.whindowWidth = event.target.innerWidth
+      console.log("Width: " + this.whindowWidth);
+}
+
   @HostListener('window:scroll', ['$event'])
   scroll(event) {
+    
     console.log(window.pageYOffset);
-    if (window.pageYOffset > 350) {
-      this.showPortfolioRow = true;
+    if(this.whindowWidth >700) {
+      if (window.pageYOffset > 290) {
+        this.showPortfolioRow = true;
+      } else {
+        this.showPortfolioRow = false
+      }
     } else {
-      this.showPortfolioRow = false
+      if (window.pageYOffset > 200) {
+        this.showPortfolioRow = true;
+      } else {
+        this.showPortfolioRow = false
+      }
     }
+    
   }
  
   useLanguage(language: string): void {

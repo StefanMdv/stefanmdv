@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -22,6 +22,7 @@ export class AppComponent {
 
   langEnglish: boolean = true;
   langDeutsch: boolean = false;
+  showButton = false;
 
 
 
@@ -43,6 +44,16 @@ export class AppComponent {
     let element = document.getElementById(id);
     document.getElementById('navbarSupportedContent').classList.remove('show');
     element.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  scroll(event) {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset > 350) {
+      this.showButton = true;
+    } else {
+      this.showButton = false
+    }
   }
 }
 
